@@ -1,6 +1,7 @@
 package com.stringsattached.healthmonitor
 
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -28,9 +29,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setStatusBarColor()
+        setSupportActionBar(binding.toolbar)
         setContentView(binding.root)
         checkPermission()
         setupBottomNavController()
+    }
+
+    private fun setStatusBarColor() {
+        window.statusBarColor = Color.parseColor("#678149")
     }
 
     private fun setupBottomNavController() {

@@ -1,4 +1,4 @@
-package com.stringsattached.healthmonitor.ui.notifications
+package com.stringsattached.healthmonitor.ui.healthMonitor
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.stringsattached.healthmonitor.databinding.FragmentNotificationsBinding
+import com.stringsattached.healthmonitor.databinding.FragmentHealthMonitorBinding
 
-class NotificationsFragment : Fragment() {
+class HealthMonitorFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentHealthMonitorBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val healthMonitorViewModel =
+            ViewModelProvider(this)[HealthMonitorViewModel::class.java]
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentHealthMonitorBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDashboard
+        healthMonitorViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

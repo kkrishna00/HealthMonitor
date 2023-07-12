@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">healthMonitor</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_first">Home</string>
+    <string name="title_middle">Health Monitor</string>
+    <string name="title_last">Activity/Goals</string>
 </resources>

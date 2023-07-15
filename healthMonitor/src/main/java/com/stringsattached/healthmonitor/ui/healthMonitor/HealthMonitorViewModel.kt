@@ -12,6 +12,9 @@ class HealthMonitorViewModel : ViewModel() {
         value = listOf(
             HealthMonitorActionsWidgets(
                 title = "BMI - BODY MASS INDEX"
+            ),
+            HealthMonitorActionsWidgets(
+                title = "PERIODS TRACKER - GUARD ON"
             )
         )
     }

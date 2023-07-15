@@ -28,7 +28,7 @@ class GoalsAndActivityFragment : Fragment() {
         _binding = FragmentActivityGoalsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
+        val textView: TextView = binding.title
         goalsAndActivityViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

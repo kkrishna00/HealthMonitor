@@ -3,11 +3,18 @@ package com.stringsattached.healthmonitor.ui.healthMonitor
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.stringsattached.healthmonitor.model.BaseDataModel
+import com.stringsattached.healthmonitor.model.HealthMonitorActionsWidgets
 
 class HealthMonitorViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+    private val _rvData = MutableLiveData<List<BaseDataModel>>().apply {
+        value = listOf(
+            HealthMonitorActionsWidgets(
+                title = "BMI - BODY MASS INDEX"
+            )
+        )
     }
-    val text: LiveData<String> = _text
+
+    val rvData: LiveData<List<BaseDataModel>> = _rvData
 }

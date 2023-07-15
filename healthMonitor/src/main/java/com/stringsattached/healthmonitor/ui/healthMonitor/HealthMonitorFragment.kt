@@ -12,7 +12,6 @@ import com.stringsattached.healthmonitor.adapters.ViewHolderFactoryImpl
 import com.stringsattached.healthmonitor.databinding.FragmentHealthMonitorBinding
 import com.stringsattached.healthmonitor.`interface`.WidgetCallBack
 import com.stringsattached.healthmonitor.model.BaseAction
-import com.stringsattached.healthmonitor.model.HealthMonitorActionsWidgets
 import com.stringsattached.healthmonitor.model.HealthMonitorBMIClickAction
 
 class HealthMonitorFragment : Fragment(), WidgetCallBack {
@@ -23,8 +22,6 @@ class HealthMonitorFragment : Fragment(), WidgetCallBack {
         BaseRvAdapter(factory = ViewHolderFactoryImpl(), widgetCallBack = this)
     }
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     private lateinit var healthMonitorViewModel: HealthMonitorViewModel
@@ -44,19 +41,22 @@ class HealthMonitorFragment : Fragment(), WidgetCallBack {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupRv()
+        observerViewModel()
+    }
 
+    private fun observerViewModel() {
+        healthMonitorViewModel.rvData.observe(viewLifecycleOwner) { data ->
+            mAdapter.updateRV(data = data)
+        }
+    }
+
+    private fun setupRv() {
         if (binding.recyclerview.adapter == null) {
             binding.recyclerview.apply {
                 layoutManager = LinearLayoutManager(requireContext())
                 adapter = mAdapter
             }
-            mAdapter.updateRV(
-                data = listOf(
-                    HealthMonitorActionsWidgets(
-                        title = "BMI"
-                    )
-                )
-            )
         }
     }
 

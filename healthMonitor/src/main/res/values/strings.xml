@@ -3,4 +3,5 @@
     <string name="title_first">Home</string>
     <string name="title_middle">Health Monitor</string>
     <string name="title_last">Activity/Goals</string>
+    <string name="health_monitor_section">HEALTH MONITOR - SECTION</string>
 </resources>

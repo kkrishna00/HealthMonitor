@@ -11,7 +11,9 @@ import com.stringsattached.healthmonitor.adapters.BaseRvAdapter
 import com.stringsattached.healthmonitor.adapters.ViewHolderFactoryImpl
 import com.stringsattached.healthmonitor.databinding.FragmentHealthMonitorBinding
 import com.stringsattached.healthmonitor.`interface`.WidgetCallBack
+import com.stringsattached.healthmonitor.model.BaseAction
 import com.stringsattached.healthmonitor.model.HealthMonitorActionsWidgets
+import com.stringsattached.healthmonitor.model.HealthMonitorBMIClickAction
 
 class HealthMonitorFragment : Fragment(), WidgetCallBack {
 
@@ -63,7 +65,11 @@ class HealthMonitorFragment : Fragment(), WidgetCallBack {
         _binding = null
     }
 
-    override fun onItemClickedAction() {
-
+    override fun onItemClickedAction(action: BaseAction) {
+        when (action) {
+            is HealthMonitorBMIClickAction -> {
+                // to -do
+            }
+        }
     }
 }

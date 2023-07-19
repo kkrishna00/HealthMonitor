@@ -8,7 +8,7 @@ import com.stringsattached.healthmonitor.databinding.UnknownLayoutBinding
 import com.stringsattached.healthmonitor.model.BaseDataModel
 import com.stringsattached.healthmonitor.model.HealthMonitorActionsWidgets
 import com.stringsattached.healthmonitor.viewholder.BaseViewHolder
-import com.stringsattached.healthmonitor.viewholder.HealthMonitorActionsWidgetsVH
+import com.stringsattached.healthmonitor.widgets.HealthMonitorActionsWidgetsVH
 import com.stringsattached.healthmonitor.viewholder.UnknownViewHolder
 
 class ViewHolderFactoryImpl {

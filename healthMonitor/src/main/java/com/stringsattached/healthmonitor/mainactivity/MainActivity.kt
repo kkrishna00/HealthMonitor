@@ -1,4 +1,4 @@
-package com.stringsattached.healthmonitor
+package com.stringsattached.healthmonitor.mainactivity
 
 import android.content.pm.PackageManager
 import android.graphics.Color
@@ -15,6 +15,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.stringsattached.healthmonitor.R
 import com.stringsattached.healthmonitor.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

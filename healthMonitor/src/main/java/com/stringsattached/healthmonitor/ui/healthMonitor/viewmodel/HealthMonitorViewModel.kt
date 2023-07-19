@@ -1,4 +1,4 @@
-package com.stringsattached.healthmonitor.ui.healthMonitor
+package com.stringsattached.healthmonitor.ui.healthMonitor.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

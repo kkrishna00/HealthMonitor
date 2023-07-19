@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/navigation_health_monitor"
-        android:name="com.stringsattached.healthmonitor.ui.healthMonitor.HealthMonitorFragment"
+        android:name="com.stringsattached.healthmonitor.ui.healthMonitor.fragments.HealthMonitorFragment"
         tools:layout="@layout/fragment_health_monitor" />
 
     <fragment

@@ -1,6 +1,5 @@
-package com.stringsattached.healthmonitor.ui.healthMonitor
+package com.stringsattached.healthmonitor.ui.healthMonitor.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +13,7 @@ import com.stringsattached.healthmonitor.databinding.FragmentHealthMonitorBindin
 import com.stringsattached.healthmonitor.`interface`.WidgetCallBack
 import com.stringsattached.healthmonitor.model.BaseAction
 import com.stringsattached.healthmonitor.model.HealthMonitorBMIClickAction
+import com.stringsattached.healthmonitor.ui.healthMonitor.viewmodel.HealthMonitorViewModel
 
 class HealthMonitorFragment : Fragment(), WidgetCallBack {
 

@@ -15,7 +15,10 @@
         android:theme="@style/Theme.HealthMonitor"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.healthMonitor.activity.HealthMonitorActionsHandlerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mainactivity.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.NoActionBar">

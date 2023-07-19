@@ -2,15 +2,18 @@ package com.stringsattached.healthmonitor.ui.healthMonitor.activity
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.stringsattached.healthmonitor.R
+import androidx.appcompat.app.AppCompatActivity
+import com.stringsattached.healthmonitor.databinding.ActivityHealthMonitorActionsHandlerBinding
 import com.stringsattached.healthmonitor.model.HealthMonitorActionsHandlerScreenData
 
 class HealthMonitorActionsHandlerActivity : AppCompatActivity() {
 
+
+    private lateinit var screenData: HealthMonitorActionsHandlerScreenData
+    private lateinit var binding: ActivityHealthMonitorActionsHandlerBinding
+
     companion object {
-        private lateinit var screenData: HealthMonitorActionsHandlerScreenData
         private const val SCREEN_DATA = "screenData"
 
         fun startHealthMonitorActionsHandlerActivity(
@@ -18,17 +21,15 @@ class HealthMonitorActionsHandlerActivity : AppCompatActivity() {
             context: Context
         ) {
             val intent = Intent(context, HealthMonitorActionsHandlerActivity::class.java)
-            val bundle = Bundle().apply {
-                putParcelable(SCREEN_DATA, screenData)
-            }
-            context.startActivity(intent, bundle)
+            intent.putExtra(SCREEN_DATA, screenData)
+            context.startActivity(intent)
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_health_monitor_actions_handler)
-
+        binding = ActivityHealthMonitorActionsHandlerBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         readBundleData()
     }
 

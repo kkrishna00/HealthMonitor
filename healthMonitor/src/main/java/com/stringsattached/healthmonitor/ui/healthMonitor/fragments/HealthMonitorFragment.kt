@@ -12,7 +12,9 @@ import com.stringsattached.healthmonitor.adapters.ViewHolderFactoryImpl
 import com.stringsattached.healthmonitor.databinding.FragmentHealthMonitorBinding
 import com.stringsattached.healthmonitor.`interface`.WidgetCallBack
 import com.stringsattached.healthmonitor.model.BaseAction
+import com.stringsattached.healthmonitor.model.HealthMonitorActionsHandlerScreenData
 import com.stringsattached.healthmonitor.model.HealthMonitorBMIClickAction
+import com.stringsattached.healthmonitor.ui.healthMonitor.activity.HealthMonitorActionsHandlerActivity
 import com.stringsattached.healthmonitor.ui.healthMonitor.viewmodel.HealthMonitorViewModel
 
 class HealthMonitorFragment : Fragment(), WidgetCallBack {
@@ -75,6 +77,9 @@ class HealthMonitorFragment : Fragment(), WidgetCallBack {
     }
 
     private fun navigateToBMIScreen() {
-
+        HealthMonitorActionsHandlerActivity.startHealthMonitorActionsHandlerActivity(
+            screenData = HealthMonitorActionsHandlerScreenData("krishna"),
+            context = requireContext()
+        )
     }
 }

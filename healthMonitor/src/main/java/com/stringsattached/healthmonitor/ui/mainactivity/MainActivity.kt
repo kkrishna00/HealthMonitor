@@ -1,4 +1,4 @@
-package com.stringsattached.healthmonitor.mainactivity
+package com.stringsattached.healthmonitor.ui.mainactivity
 
 import android.content.pm.PackageManager
 import android.graphics.Color

@@ -11,12 +11,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_health_monitor"
         android:name="com.stringsattached.healthmonitor.ui.healthMonitor.HealthMonitorFragment"
         tools:layout="@layout/fragment_health_monitor" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_goals"
         android:name="com.stringsattached.healthmonitor.ui.goalsAndActivity.GoalsAndActivityFragment"
         tools:layout="@layout/fragment_activity_goals" />
 </navigation>

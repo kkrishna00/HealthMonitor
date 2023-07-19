@@ -6,7 +6,6 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -15,6 +14,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.stringsattached.healthmonitor.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val view = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
             when (destination.id) {
-                R.id.navigation_dashboard, R.id.navigation_notifications -> {
+                R.id.navigation_goals, R.id.navigation_health_monitor -> {
                     view.visibility = View.GONE
                 } else -> {
                     view.visibility = View.VISIBLE
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_health_monitor, R.id.navigation_goals
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

@@ -1,5 +1,6 @@
 package com.stringsattached.healthmonitor.ui.healthMonitor
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -68,8 +69,12 @@ class HealthMonitorFragment : Fragment(), WidgetCallBack {
     override fun onItemClickedAction(action: BaseAction) {
         when (action) {
             is HealthMonitorBMIClickAction -> {
-                // to -do
+                navigateToBMIScreen()
             }
         }
+    }
+
+    private fun navigateToBMIScreen() {
+
     }
 }

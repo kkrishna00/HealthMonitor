@@ -7,12 +7,12 @@
         android:title="@string/title_first" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_health_monitor"
         android:icon="@drawable/baseline_monitor_heart_24"
         android:title="@string/title_middle" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_goals"
         android:icon="@drawable/baseline_health_and_safety_24"
         android:title="@string/title_last" />
 
